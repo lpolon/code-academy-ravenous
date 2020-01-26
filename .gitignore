@@ -11,6 +11,9 @@
 # production
 /build
 
+# yelp api keys
+/src/util/YelpApiKey.js
+
 # misc
 .DS_Store
 .env.local

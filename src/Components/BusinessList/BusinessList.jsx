@@ -3,15 +3,13 @@ import './Business.css';
 
 import Business from '../Business/Business';
 
-export default class BusinessList extends Component {
-  render() {
-    const { businesses } = this.props;
+export default function BusinessList(props) {
+    const { businesses } = props;
     return (
       <div className="BusinessList">
-        {businesses.map((business, i) => {
-          return <Business key={i} business={business} />;
+        {businesses.map((business) => {
+          return <Business key={business.id} business={business} />;
         })}
       </div>
     );
-  }
 }

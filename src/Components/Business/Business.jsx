@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import './Business.css';
 
-export default class Business extends Component {
-  render() {
-    const {business} = this.props
+export default function Business(props) {
+    const {business} = props
+    // this.defaultProps = {
+    //   business: {
+    //     name: 'Nenhum Resultado encontrado'
+    //   }
+    // }
     return (
       <div className="Business">
         <div className="image-container">
@@ -26,5 +30,4 @@ export default class Business extends Component {
         </div>
       </div>
     );
-  }
 }
