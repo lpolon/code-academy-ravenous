@@ -19,11 +19,17 @@ const business = {
 const businesses = [business, business, business, business, business, business];
 
 export default class App extends Component {
+
+  // this function will be passed by props and be called onSubmit, i guess...
+  searchYelp(term, location, sortBy) {
+    console.log(`params avaliable? : ${term} ${location} ${sortBy}`)
+  }
+
   render() {
     return (
       <div className="App">
         <h1>ravenous</h1>
-        <SearchBar />
+        <SearchBar searchYelp={this.searchYelp} />
         <BusinessList businesses={businesses}/>
       </div>
     );
