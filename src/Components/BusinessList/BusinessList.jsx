@@ -5,14 +5,12 @@ import Business from '../Business/Business';
 
 export default class BusinessList extends Component {
   render() {
+    const { businesses } = this.props;
     return (
       <div className="BusinessList">
-        <Business />
-        <Business />
-        <Business />
-        <Business />
-        <Business />
-        <Business />
+        {businesses.map((business, i) => {
+          return <Business key={i} business={business} />;
+        })}
       </div>
     );
   }
