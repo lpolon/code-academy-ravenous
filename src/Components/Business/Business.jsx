@@ -3,11 +3,6 @@ import './Business.css';
 
 export default function Business(props) {
     const {business} = props
-    // this.defaultProps = {
-    //   business: {
-    //     name: 'Nenhum Resultado encontrado'
-    //   }
-    // }
     return (
       <div className="Business">
         <div className="image-container">
